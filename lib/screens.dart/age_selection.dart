@@ -25,7 +25,7 @@ class _AgeSelectionState extends State<AgeSelection> {
         appBar: AppBar(
             backgroundColor: Colors.teal,
             title: const Text(
-              'Select Your Age Group',
+              'Select Age Group',
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
             )),

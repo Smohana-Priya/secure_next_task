@@ -91,15 +91,22 @@ class _HomeState extends State<Home> {
               ? ListView.builder(
                   itemCount: _employees.length,
                   itemBuilder: (context, index) {
-                    return ListTile(
-                      title: Text(_employees[index]['employee_name']),
-                      subtitle:
-                          Text('Age: ${_employees[index]['employee_age']}'),
+                    return Column(
+                      children: [
+                        ListTile(
+                          title: Text(_employees[index]['employee_name']),
+                          subtitle:
+                              Text('Age: ${_employees[index]['employee_age']}'),
+                        ),
+                        const Divider()
+                      ],
                     );
                   },
                 )
               : const Center(
-                  child: CircularProgressIndicator(),
+                  child: CircularProgressIndicator(
+                    color: Colors.teal,
+                  ),
                 )),
     );
   }

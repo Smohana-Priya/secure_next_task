@@ -36,6 +36,7 @@ class _AgeSelectionState extends State<AgeSelection> {
               title: const Text('Below 30'),
               value: 'below 30',
               groupValue: _selectedAgeGroup,
+              activeColor: Colors.teal,
               onChanged: (value) {
                 setState(() {
                   _selectedAgeGroup = value;
@@ -46,6 +47,7 @@ class _AgeSelectionState extends State<AgeSelection> {
               title: const Text('Below 40'),
               value: 'below 40',
               groupValue: _selectedAgeGroup,
+              activeColor: Colors.teal,
               onChanged: (value) {
                 setState(() {
                   _selectedAgeGroup = value;
@@ -56,6 +58,7 @@ class _AgeSelectionState extends State<AgeSelection> {
               title: const Text('Below 50'),
               value: 'below 50',
               groupValue: _selectedAgeGroup,
+              activeColor: Colors.teal,
               onChanged: (value) {
                 setState(() {
                   _selectedAgeGroup = value;
@@ -66,20 +69,28 @@ class _AgeSelectionState extends State<AgeSelection> {
               title: const Text('Below 60'),
               value: 'below 60',
               groupValue: _selectedAgeGroup,
+              activeColor: Colors.teal,
               onChanged: (value) {
                 setState(() {
                   _selectedAgeGroup = value;
                 });
               },
             ),
-            ElevatedButton(
-              onPressed: _selectedAgeGroup == null ? null : _saveAgeGroup,
-              child: const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text(
-                  'Save',
-                  style: TextStyle(
-                      color: Colors.teal, fontWeight: FontWeight.w500),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: _selectedAgeGroup == null ? null : _saveAgeGroup,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Save',
+                      style: TextStyle(
+                          color:
+                              _selectedAgeGroup == null ? null : Colors.teal),
+                    ),
+                  ),
                 ),
               ),
             ),

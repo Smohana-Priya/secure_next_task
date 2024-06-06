@@ -49,7 +49,9 @@ class _InitializationScreenState extends State<InitializationScreen> {
     if (_isFirstLaunch == null) {
       return const Scaffold(
         body: Center(
-          child: CircularProgressIndicator(),
+          child: CircularProgressIndicator(
+            color: Colors.teal,
+          ),
         ),
       );
     } else {

@@ -82,7 +82,10 @@ class _HomeState extends State<Home> {
             ),
             actions: [
               IconButton(
-                icon: const Icon(Icons.settings),
+                icon: const Icon(
+                  Icons.settings,
+                  color: Colors.white,
+                ),
                 onPressed: _changeAgeGroup,
               )
             ],
